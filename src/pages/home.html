@@ -14,63 +14,109 @@
   </head>
   <body class="bg-[#f4f5f7] min-h-screen">
     <!-- header section -->
-    <section
-      class="flex items-center justify-between max-w-lg mx-auto border-b-1 border-gray-300 p-3"
-    >
-      <div class="flex items-center">
-        <img src="../../assets/logo.png" alt="logo" class="w-24" />
-        <div class="text-black">
-          <h2 class="font-bold">$5000</h2>
-          <p class="font-normal">Available Balance</p>
+    <div class="bg-white max-w-lg mx-auto rounded-b-lg p-1">
+      <section
+        class="flex items-center justify-between border-b-1 border-gray-300 p-3"
+      >
+        <div class="flex items-center">
+          <img src="../../assets/logo.png" alt="logo" class="w-24" />
+          <div class="text-black">
+            <h2 class="font-bold">$5000</h2>
+            <p class="font-normal">Available Balance</p>
+          </div>
+        </div>
+
+        <button class="btn">
+          <i class="fa-solid fa-right-from-bracket mt-1 rotate-180"></i>
+          Logout
+        </button>
+      </section>
+
+      <!-- Payment Services -->
+      <div class="mt-8 p-2">
+        <h2 class="font-bold">🔥Welcome to MY<span>PAY</span></h2>
+        <p class="text-gray-500">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+      </div>
+
+      <div class="m-h-[200px] grid grid-cols-3 gap-4 mt-8 p-3">
+        <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
+          <img src="../../assets/opt-1.png" alt="Add Money" class="mx-auto" />
+          <p>Add Money</p>
+        </div>
+        <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
+          <img src="../../assets/opt-2.png" alt="Cashout" class="mx-auto" />
+          <p>Cashout</p>
+        </div>
+        <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
+          <img
+            src="../../assets/opt-3.png"
+            alt="Transfer Money"
+            class="mx-auto"
+          />
+          <p>Transfer Money</p>
+        </div>
+        <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
+          <img src="../../assets/opt-4.png" alt="Get Bonus" class="mx-auto" />
+          <p>Get Bonus</p>
+        </div>
+        <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
+          <img src="../../assets/opt-5.png" alt="Pay Bill" class="mx-auto" />
+          <p>Pay Bill</p>
+        </div>
+        <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
+          <img
+            src="../../assets/opt-6.png"
+            alt="Transactions"
+            class="mx-auto"
+          />
+          <p>Transactions</p>
         </div>
       </div>
-
-      <button class="btn">
-        <i class="fa-solid fa-right-from-bracket mt-1 rotate-180"></i>
-        Logout
-      </button>
-    </section>
-
-    <!-- Payment Services -->
-    <div class="max-w-lg mx-auto mt-8">
-      <h2 class="font-bold">🔥Welcome to MY<span>PAY</span></h2>
-      <p class="text-gray-500">
-        Enjoy easy and convenient financial services with us. Cashout charge is
-        low and
-      </p>
     </div>
 
-    <div class="max-w-lg mx-auto m-h-[200px] grid grid-cols-3 gap-4 mt-8">
-      <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
-        <img src="../../assets/opt-1.png" alt="Add Money" class="mx-auto" />
-        <p>Add Money</p>
-      </div>
-      <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
-        <img src="../../assets/opt-2.png" alt="Cashout" class="mx-auto" />
-        <p>Cashout</p>
-      </div>
-      <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
-        <img
-          src="../../assets/opt-3.png"
-          alt="Transfer Money"
-          class="mx-auto"
-        />
-        <p>Transfer Money</p>
-      </div>
-      <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
-        <img src="../../assets/opt-4.png" alt="Get Bonus" class="mx-auto" />
-        <p>Get Bonus</p>
-      </div>
-      <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
-        <img src="../../assets/opt-5.png" alt="Pay Bill" class="mx-auto" />
-        <p>Pay Bill</p>
-      </div>
-      <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
-        <img src="../../assets/opt-6.png" alt="Transactions" class="mx-auto" />
-        <p>Transactions</p>
+    <!-- add money section -->
+    <div class="form-section max-w-lg mx-auto mt-8">
+      <div>
+        <h1>Add Money</h1>
+
+        <form action="">
+          <div>
+            <h1>Select A bank</h1>
+            <select class="select [&::picker(select)]:max-h-26">
+              <option disabled selected>Select Your Bank</option>
+              <option>BRAC Bank</option>
+              <option>The City Bank</option>
+              <option>Dutch-Bangla Bank</option>
+              <option>Eastern Bank</option>
+              <option>Prime Bank</option>
+              <option>Pubali Bank</option>
+            </select>
+          </div>
+          <div>
+            <h1>Bank Account Number</h1>
+            <input type="text" placeholder="Type here" class="input" />
+          </div>
+          <div>
+            <h1>Amount to Add</h1>
+            <input type="text" placeholder="Type here" class="input" />
+          </div>
+          <div>
+            <h1>Pin Number</h1>
+            <input type="text" placeholder="Type here" class="input" />
+          </div>
+          <button
+            id="loginButton"
+            type="submit"
+            class="btn btn-primary rounded-3xl mt-12 w-full"
+          >
+            Add Money
+          </button>
+        </form>
       </div>
     </div>
-
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
