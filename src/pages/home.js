@@ -17,4 +17,12 @@ document
     const newTotalBalance = addAmount + availableBalance;
 
     document.getElementById("available-balance").innerText = newTotalBalance;
+
+    // clear form
+    document.getElementById("select-bank").selectedIndex = 0;
+    document.getElementById("account-number").value = "";
+    document.getElementById("add-amount").value = "";
+    document.getElementById("pin-number").value = "";
+
+    alert("Money added successfully!");
   });
