@@ -21,7 +21,7 @@
         <div class="flex items-center">
           <img src="../../assets/logo.png" alt="logo" class="w-24" />
           <div class="text-black">
-            <h2 class="font-bold">$5000</h2>
+            <h2 class="font-bold">$<span id="available-balance">5000</span></h2>
             <p class="font-normal">Available Balance</p>
           </div>
         </div>
@@ -85,7 +85,7 @@
         <form action="" class="bg-white rounded-lg p-3">
           <div>
             <h1 class="font-semibold">Select A bank</h1>
-            <select class="select [&::picker(select)]:max-h-26 rounded-3xl w-full mt-2 bg-[#f4f5f7]">
+            <select id="select-bank" class="select [&::picker(select)]:max-h-26 rounded-3xl w-full mt-2 bg-[#f4f5f7]">
               <option disabled selected>Select Your Bank</option>
               <option>BRAC Bank</option>
               <option>The City Bank</option>
@@ -97,18 +97,18 @@
           </div>
           <div class="mt-2">
             <h1 class="font-semibold">Bank Account Number</h1>
-            <input type="text" placeholder="Enter 11 digit account number" class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]" />
+            <input id="account-number" type="text" placeholder="Enter 11 digit account number" class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]" />
           </div>
           <div>
             <h1 class="mt-2 font-semibold">Amount to Add</h1>
-            <input type="text" placeholder="Add Amount to withdraw" class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]" />
+            <input id="add-amount" type="text" placeholder="Add Amount to withdraw" class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]" />
           </div>
           <div>
             <h1 class="mt-2 font-semibold">Pin Number</h1>
-            <input type="text" placeholder="Enter 4 digit pin number" class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]" />
+            <input id="pin-number" type="text" placeholder="Enter 4 digit pin number" class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]" />
           </div>
           <button
-            id="loginButton"
+            id="addMoney-Button"
             type="submit"
             class="btn btn-primary rounded-3xl mt-8 mb-4 w-full"
           >
@@ -117,6 +117,6 @@
         </form>
       </div>
     </div>
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="home.js"></script>
   </body>
 </html>
