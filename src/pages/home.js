@@ -14,6 +14,13 @@ document
       document.getElementById("available-balance").innerText,
     );
 
+    // select bank
+    if (!bank) {
+      alert("Please select a bank.");
+      return;
+    }
+
+    
     const newTotalBalance = addAmount + availableBalance;
 
     document.getElementById("available-balance").innerText = newTotalBalance;
