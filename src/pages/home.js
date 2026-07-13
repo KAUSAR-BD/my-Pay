@@ -20,6 +20,12 @@ document
       return;
     }
 
+    // Validate account number (11 digits)
+    if (accountNumber.length < 11) {
+      alert("Please enter your account number");
+      return;
+    }
+
     // Validate PIN (example PIN)
     if (pinNumber !== "1234") {
       alert("Invalid PIN.");
