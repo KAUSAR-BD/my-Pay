@@ -20,7 +20,12 @@ document
       return;
     }
 
-    
+    // Validate PIN (example PIN)
+    if (pinNumber !== "1234") {
+      alert("Invalid PIN.");
+      return;
+    }
+
     const newTotalBalance = addAmount + availableBalance;
 
     document.getElementById("available-balance").innerText = newTotalBalance;
