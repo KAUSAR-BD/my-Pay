@@ -46,12 +46,10 @@
           <img src="../../assets/opt-1.png" alt="Add Money" class="mx-auto" />
           <p>Add Money</p>
         </div>
-        <a href="cashOut.html">
-          <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
-            <img src="../../assets/opt-2.png" alt="Cashout" class="mx-auto" />
-            <p>Cashout</p>
-          </div></a
-        >
+        <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
+          <img src="../../assets/opt-2.png" alt="Cashout" class="mx-auto" />
+          <p>Cashout</p>
+        </div>
         <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
           <img
             src="../../assets/opt-3.png"
@@ -79,44 +77,29 @@
       </div>
     </div>
 
-    <!-- add money section -->
+    <!-- cashout section -->
     <div class="form-section max-w-lg mx-auto mt-8">
       <div>
-        <h1 class="mb-6 font-bold">Add Money</h1>
+        <h1 class="mb-6 font-bold">Cash Out</h1>
 
         <form action="" class="bg-white rounded-lg p-3">
-          <div>
-            <h1 class="font-semibold">Select A bank</h1>
-            <select
-              id="select-bank"
-              class="select [&::picker(select)]:max-h-26 rounded-3xl w-full mt-2 bg-[#f4f5f7]"
-            >
-              <option value="" disabled selected>Select Your Bank</option>
-              <option>BRAC Bank</option>
-              <option>The City Bank</option>
-              <option>Dutch-Bangla Bank</option>
-              <option>Eastern Bank</option>
-              <option>Prime Bank</option>
-              <option>Pubali Bank</option>
-            </select>
-          </div>
           <div class="mt-2">
-            <h1 class="font-semibold">Bank Account Number</h1>
+            <h1 class="font-semibold">Agent Number</h1>
             <input
-              id="account-number"
+              id="agent-number"
               type="number"
               required
-              placeholder="Enter 11 digit account number"
+              placeholder="Enter 11 digit number"
               class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
             />
           </div>
           <div>
-            <h1 class="mt-2 font-semibold">Amount to Add</h1>
+            <h1 class="mt-2 font-semibold">Amount</h1>
             <input
-              id="add-amount"
+              id="cashout-amount"
               type="number"
               required
-              placeholder="Enter Amount"
+              placeholder="Enter Amount to withdraw"
               class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
             />
           </div>
@@ -135,7 +118,7 @@
             type="submit"
             class="btn btn-primary rounded-3xl mt-8 mb-4 w-full"
           >
-            Add Money
+            Withdraw Money
           </button>
         </form>
       </div>
