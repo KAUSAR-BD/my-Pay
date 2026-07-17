@@ -42,16 +42,22 @@
       </div>
 
       <div class="m-h-[200px] grid grid-cols-3 gap-4 mt-8 p-3">
-        <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
+        <div
+          id="addMoney-btn"
+          class="border-2 border-gray-300 rounded-2xl text-center p-3"
+        >
           <img src="../../assets/opt-1.png" alt="Add Money" class="mx-auto" />
           <p>Add Money</p>
         </div>
-        <a href="cashOut.html">
-          <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
-            <img src="../../assets/opt-2.png" alt="Cashout" class="mx-auto" />
-            <p>Cashout</p>
-          </div></a
+
+        <div
+          id="cashout-btn"
+          class="border-2 border-gray-300 rounded-2xl text-center p-3"
         >
+          <img src="../../assets/opt-2.png" alt="Cashout" class="mx-auto" />
+          <p>Cashout</p>
+        </div>
+
         <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
           <img
             src="../../assets/opt-3.png"
@@ -60,14 +66,17 @@
           />
           <p>Transfer Money</p>
         </div>
+
         <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
           <img src="../../assets/opt-4.png" alt="Get Bonus" class="mx-auto" />
           <p>Get Bonus</p>
         </div>
+
         <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
           <img src="../../assets/opt-5.png" alt="Pay Bill" class="mx-auto" />
           <p>Pay Bill</p>
         </div>
+
         <div class="border-2 border-gray-300 rounded-2xl text-center p-3">
           <img
             src="../../assets/opt-6.png"
@@ -79,115 +88,121 @@
       </div>
     </div>
 
-    <!-- add money section -->
-    <div class="form-section max-w-lg mx-auto mt-8">
-      <div>
-        <h1 class="mb-6 font-bold">Add Money</h1>
+    <div class="all-form-section max-w-lg mx-auto">
+      <!-- add money section -->
+      <div
+        id="addMoney-section"
+        class="form-section mt-8"
+        style="display: none"
+      >
+        <div>
+          <h1 class="mb-6 font-bold">Add Money</h1>
 
-        <form action="" class="bg-white rounded-lg p-3">
-          <div>
-            <h1 class="font-semibold">Select A bank</h1>
-            <select
-              id="select-bank"
-              class="select [&::picker(select)]:max-h-26 rounded-3xl w-full mt-2 bg-[#f4f5f7]"
+          <form action="" class="bg-white rounded-lg p-3">
+            <div>
+              <h1 class="font-semibold">Select A bank</h1>
+              <select
+                id="select-bank"
+                class="select [&::picker(select)]:max-h-26 rounded-3xl w-full mt-2 bg-[#f4f5f7]"
+              >
+                <option value="" disabled selected>Select Your Bank</option>
+                <option>BRAC Bank</option>
+                <option>The City Bank</option>
+                <option>Dutch-Bangla Bank</option>
+                <option>Eastern Bank</option>
+                <option>Prime Bank</option>
+                <option>Pubali Bank</option>
+              </select>
+            </div>
+            <div class="mt-2">
+              <h1 class="font-semibold">Bank Account Number</h1>
+              <input
+                id="account-number"
+                type="number"
+                required
+                placeholder="Enter 11 digit account number"
+                class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
+              />
+            </div>
+            <div>
+              <h1 class="mt-2 font-semibold">Amount to Add</h1>
+              <input
+                id="add-amount"
+                type="number"
+                required
+                placeholder="Enter Amount"
+                class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
+              />
+            </div>
+            <div>
+              <h1 class="mt-2 font-semibold">Pin Number</h1>
+              <input
+                id="pin-number"
+                type="password"
+                required
+                placeholder="Enter 4 digit pin number"
+                class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
+              />
+            </div>
+            <button
+              id="addMoney-Button"
+              type="submit"
+              class="btn btn-primary rounded-3xl mt-8 mb-4 w-full"
             >
-              <option value="" disabled selected>Select Your Bank</option>
-              <option>BRAC Bank</option>
-              <option>The City Bank</option>
-              <option>Dutch-Bangla Bank</option>
-              <option>Eastern Bank</option>
-              <option>Prime Bank</option>
-              <option>Pubali Bank</option>
-            </select>
-          </div>
-          <div class="mt-2">
-            <h1 class="font-semibold">Bank Account Number</h1>
-            <input
-              id="account-number"
-              type="number"
-              required
-              placeholder="Enter 11 digit account number"
-              class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
-            />
-          </div>
-          <div>
-            <h1 class="mt-2 font-semibold">Amount to Add</h1>
-            <input
-              id="add-amount"
-              type="number"
-              required
-              placeholder="Enter Amount"
-              class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
-            />
-          </div>
-          <div>
-            <h1 class="mt-2 font-semibold">Pin Number</h1>
-            <input
-              id="pin-number"
-              type="password"
-              required
-              placeholder="Enter 4 digit pin number"
-              class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
-            />
-          </div>
-          <button
-            id="addMoney-Button"
-            type="submit"
-            class="btn btn-primary rounded-3xl mt-8 mb-4 w-full"
-          >
-            Add Money
-          </button>
-        </form>
+              Add Money
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- cashout section -->
+      <div id="cashout-section" class="form-section mt-8" style="display: none">
+        <div>
+          <h1 class="mb-6 font-bold">Cash Out</h1>
+
+          <form action="" class="bg-white rounded-lg p-3">
+            <div class="mt-2">
+              <h1 class="font-semibold">Agent Number</h1>
+              <input
+                id="agent-number"
+                type="number"
+                required
+                placeholder="Enter 11 digit number"
+                class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
+              />
+            </div>
+            <div>
+              <h1 class="mt-2 font-semibold">Amount</h1>
+              <input
+                id="cashout-amount"
+                type="number"
+                required
+                placeholder="Enter Amount to withdraw"
+                class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
+              />
+            </div>
+            <div>
+              <h1 class="mt-2 font-semibold">Pin Number</h1>
+              <input
+                id="cashoutPin-number"
+                type="password"
+                required
+                placeholder="Enter 4 digit pin number"
+                class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
+              />
+            </div>
+            <button
+              id="withdraw-btn"
+              type="submit"
+              class="btn btn-primary rounded-3xl mt-8 mb-4 w-full"
+            >
+              Withdraw Money
+            </button>
+          </form>
+        </div>
       </div>
     </div>
 
-
-        <!-- cashout section -->
-    <div class="form-section max-w-lg mx-auto mt-8">
-      <div>
-        <h1 class="mb-6 font-bold">Cash Out</h1>
-
-        <form action="" class="bg-white rounded-lg p-3">
-          <div class="mt-2">
-            <h1 class="font-semibold">Agent Number</h1>
-            <input
-              id="agent-number"
-              type="number"
-              required
-              placeholder="Enter 11 digit number"
-              class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
-            />
-          </div>
-          <div>
-            <h1 class="mt-2 font-semibold">Amount</h1>
-            <input
-              id="cashout-amount"
-              type="number"
-              required
-              placeholder="Enter Amount to withdraw"
-              class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
-            />
-          </div>
-          <div>
-            <h1 class="mt-2 font-semibold">Pin Number</h1>
-            <input
-              id="cashoutPin-number"
-              type="password"
-              required
-              placeholder="Enter 4 digit pin number"
-              class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
-            />
-          </div>
-          <button
-            id="withdraw-btn"
-            type="submit"
-            class="btn btn-primary rounded-3xl mt-8 mb-4 w-full"
-          >
-            Withdraw Money
-          </button>
-        </form>
-      </div>
-    </div>
     <script type="module" src="home.js"></script>
   </body>
 </html>

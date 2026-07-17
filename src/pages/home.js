@@ -66,6 +66,19 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
     return;
   }
   const afterCashoutBalance = availableBalance - cashOutAmount;
-  
+
   document.getElementById("available-balance").innerText = afterCashoutBalance;
+});
+
+
+// toggle feature
+
+document.getElementById("addMoney-btn").addEventListener("click", function () {
+  document.getElementById("cashout-section").style.display = "none";
+  document.getElementById("addMoney-section").style.display = "block";
+});
+
+document.getElementById("cashout-btn").addEventListener("click", function () {
+  document.getElementById("cashout-section").style.display = "block";
+  document.getElementById("addMoney-section").style.display = "none";
 });
