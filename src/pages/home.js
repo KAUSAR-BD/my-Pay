@@ -44,3 +44,16 @@ document
 
     alert("Money added successfully!");
   });
+
+// cashout
+
+document.getElementById("withdraw-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  const agent = document.getElementById("agent-number").value;
+  const cashOutAmount = parseInt(
+    document.getElementById("cashout-amount").value,
+  );
+
+  const cashoutPin = document.getElementById("cashoutPin-number").value;
+});

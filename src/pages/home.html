@@ -140,6 +140,54 @@
         </form>
       </div>
     </div>
+
+
+        <!-- cashout section -->
+    <div class="form-section max-w-lg mx-auto mt-8">
+      <div>
+        <h1 class="mb-6 font-bold">Cash Out</h1>
+
+        <form action="" class="bg-white rounded-lg p-3">
+          <div class="mt-2">
+            <h1 class="font-semibold">Agent Number</h1>
+            <input
+              id="agent-number"
+              type="number"
+              required
+              placeholder="Enter 11 digit number"
+              class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
+            />
+          </div>
+          <div>
+            <h1 class="mt-2 font-semibold">Amount</h1>
+            <input
+              id="cashout-amount"
+              type="number"
+              required
+              placeholder="Enter Amount to withdraw"
+              class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
+            />
+          </div>
+          <div>
+            <h1 class="mt-2 font-semibold">Pin Number</h1>
+            <input
+              id="cashoutPin-number"
+              type="password"
+              required
+              placeholder="Enter 4 digit pin number"
+              class="input rounded-3xl w-full mt-2 bg-[#f4f5f7]"
+            />
+          </div>
+          <button
+            id="withdraw-btn"
+            type="submit"
+            class="btn btn-primary rounded-3xl mt-8 mb-4 w-full"
+          >
+            Withdraw Money
+          </button>
+        </form>
+      </div>
+    </div>
     <script type="module" src="home.js"></script>
   </body>
 </html>
