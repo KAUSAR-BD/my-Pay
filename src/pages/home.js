@@ -56,4 +56,16 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
   );
 
   const cashoutPin = document.getElementById("cashoutPin-number").value;
+
+  const availableBalance = parseInt(
+    document.getElementById("available-balance").innerText,
+  );
+
+  if (cashOutAmount > availableBalance) {
+    alert("Insufficient balance!");
+    return;
+  }
+  const afterCashoutBalance = availableBalance - cashOutAmount;
+  
+  document.getElementById("available-balance").innerText = afterCashoutBalance;
 });
