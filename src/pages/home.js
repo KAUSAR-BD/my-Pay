@@ -1,5 +1,13 @@
 import "../../src/style.css";
 
+function getInputValue(id) {
+  const inputField = document.getElementById(id);
+  const inputFieldValue = inputField.value;
+  const newInputFieldValue = parseInt(inputFieldValue);
+
+  console.log(newInputFieldValue)
+}
+
 document
   .getElementById("addMoney-Button")
   .addEventListener("click", function (e) {
@@ -7,7 +15,7 @@ document
 
     const bank = document.getElementById("select-bank").value;
     const accountNumber = document.getElementById("account-number").value;
-    const addAmount = parseInt(document.getElementById("add-amount").value);
+    const addAmount = getInputValue("add-amount")
     const pinNumber = document.getElementById("pin-number").value;
 
     const availableBalance = parseInt(
@@ -69,7 +77,6 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
 
   document.getElementById("available-balance").innerText = afterCashoutBalance;
 });
-
 
 // toggle feature
 
