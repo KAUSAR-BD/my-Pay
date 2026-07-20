@@ -5,7 +5,7 @@ function getInputValue(id) {
   const inputFieldValue = inputField.value;
   const newInputFieldValue = parseInt(inputFieldValue);
 
-  console.log(newInputFieldValue)
+  return newInputFieldValue;
 }
 
 document
@@ -14,9 +14,9 @@ document
     e.preventDefault();
 
     const bank = document.getElementById("select-bank").value;
-    const accountNumber = document.getElementById("account-number").value;
-    const addAmount = getInputValue("add-amount")
-    const pinNumber = document.getElementById("pin-number").value;
+    const accountNumber = getInputValue("account-number");
+    const addAmount = getInputValue("add-amount");
+    const pinNumber = getInputValue("pin-number");
 
     const availableBalance = parseInt(
       document.getElementById("available-balance").innerText,
@@ -29,15 +29,15 @@ document
     }
 
     // Validate account number (11 digits)
-    if (accountNumber.length < 11) {
+    if (accountNumber.length !== 11) {
       alert("Please enter your account number");
       return;
     }
 
     // Validate PIN (example PIN)
-    if (pinNumber !== "1234") {
+    if (pinNumber !== 1234) {
       alert("Invalid PIN.");
-      return;
+      
     }
 
     const newTotalBalance = addAmount + availableBalance;
